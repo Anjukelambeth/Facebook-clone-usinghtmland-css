@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Clone</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css" type="text/css">
+</head>
+<body>
+    <div class="full-page">
+    <!-- header starts -->
+    <div class="header">
+        <div class="header__left">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/1200px-Facebook_f_logo_%282019%29.svg.png"
+            alt=""
+          />
+          <div class="header__input">
+            <span class="material-icons"> search </span>
+            <input type="text" placeholder="Search Facebook" />
+          </div>
+        </div>
+
+        <div class="header__middle">
+            <div class="header__option active">
+              <span class="material-icons"> home </span>
+            </div>
+    
+            <div class="header__option">
+                <span class="material-icons">
+                    ondemand_video
+                    </span>
+            </div>
+            <div class="header__option">
+              <span class="material-icons"> storefront </span>
+            </div>
+            <div class="header__option">
+                <div class="groups-circle">
+              <span class="material-icons">
+                groups
+                </span>
+            </div>
+        </div>
+            <div class="header__option">
+                <span class="material-icons">
+                    videogame_asset
+                    </span>
+            </div>
+           
+          </div>
+          <div class="header__right">
+            <div class="header__info">
+              <img
+                class="user__avatar"
+                src="https://cdn.pixabay.com/photo/2014/04/03/10/32/user-310807_960_720.png"
+                alt=""
+              />
+              <h4>Anju</h4>
+            </div>
+            <span class="material-icons"> apps </span>
+            <img
+                class="messenger"
+                src="data:image/png;base64,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"
+                alt=""
+              />
+            <span class="material-icons">
+                notifications
+                </span>
+                <span class="material-icons">
+                    arrow_drop_down
+                    </span>
+                    
+          </div>
+    </div>
+     <!-- header ends -->
+
+    <!-- main body starts -->
+    <div class="main__body">
+    <!--sidebar starts-->
+    <div class="sidebar">
+        <div class="sidebarRow">
+            <img
+            class="sidebar-images"
+            src="https://cdn.pixabay.com/photo/2014/04/03/10/32/user-310807_960_720.png"
+            alt=""
+          />
+          <h4>Anju</h4>
+        </div>
+
+        <div class="sidebarRow">
+            <img class="sidebar-images" src="https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/S0U5ECzYUSu.png">
+          <h4>Friends</h4>
+        </div>
+        <div class="sidebarRow">
+            <img class="sidebar-images" src="https://static.xx.fbcdn.net/rsrc.php/v3/y5/r/duk32h44Y31.png">
+            <h4>Watch</h4>
+          </div>
+          <div class="sidebarRow">
+            <img class="sidebar-images" src="https://static.xx.fbcdn.net/rsrc.php/v3/y5/r/PrjLkDYpYbH.png">
+            <h4>Groups</h4>
+          </div>
+          <div class="sidebarRow">
+            <img class="sidebar-images" src="https://static.xx.fbcdn.net/rsrc.php/v3/yU/r/D2y-jJ2C_hO.png">
+            <h4>Marketplace</h4>
+          </div>
+          <div class="sidebarRow">
+            <img class="sidebar-images" src="https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/he-BkogidIc.png">
+            <h4>Memories</h4>
+          </div>
+          <div class="sidebarRow">
+            <img class="sidebar-images" src="https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/lVijPkTeN-r.png">
+            <h4>Saved</h4>
+          </div>
+          <div class="sidebarRow">
+            <img class="sidebar-images" src="https://static.xx.fbcdn.net/rsrc.php/v3/yH/r/kyCAf2jbZvF.png">
+            <h4>Pages</h4>
+          </div>
+          <div class="sidebarRow">
+            <img class="sidebar-images" src="https://static.xx.fbcdn.net/rsrc.php/v3/yu/r/eXC82ZeepQ7.png">
+            <h4>Events</h4>
+          </div>
+          <div class="sidebarRow">
+            <img class="sidebar-images" src="https://static.xx.fbcdn.net/rsrc.php/v3/yc/r/hTN47HVa4oS.png">
+            <h4>Most recent</h4>
+          </div>
+          <div class="sidebarRow">
+            <span class="material-icons">
+                expand_more
+                </span>
+            <h4>See more</h4>
+          </div>
+          <div class="sidebarrow2">
+              <h4>Your shortcuts</h4>
+              
+          </div>
+    </div>
+    <!--sidebar ends-->
+    <!-- feed starts -->
+    <div class="feed">
+        <div class="storyReel">
+          <!-- story starts -->
+          <div
+            style="
+              background-image: url('https://cdn.pixabay.com/photo/2014/04/03/10/32/user-310807_960_720.png');
+            "
+            class="story"
+          >
+            <img
+              class="story__avatar"
+              src="https://cdn.pixabay.com/photo/2014/04/03/10/32/user-310807_960_720.png"
+              alt=""
+            />
+            <span class="material-icons">
+                add
+                </span>
+            <h4>Creat story</h4>
+          </div>
+          <!-- story ends -->
+           <!-- story starts -->
+           <div
+           style="
+             background-image: url('https://images.unsplash.com/photo-1527082395-e939b847da0d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80');
+           "
+           class="story"
+         >
+           <img
+             class="story__avatar"
+             src="https://cdn.pixabay.com/photo/2014/04/03/10/32/user-310807_960_720.png"
+             alt=""
+           />
+           <h4>Anju</h4>
+         </div>
+         <!-- story ends -->
+          <!-- story starts -->
+          <div
+            style="
+              background-image: url('https://images.unsplash.com/photo-1527082395-e939b847da0d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80');
+            "
+            class="story"
+          >
+            <img
+              class="story__avatar"
+              src="https://cdn.pixabay.com/photo/2014/04/03/10/32/user-310807_960_720.png"
+              alt=""
+            />
+            <h4>Anju</h4>
+          </div>
+          <!-- story ends -->
+           <!-- story starts -->
+           <div
+           style="
+             background-image: url('https://images.unsplash.com/photo-1527082395-e939b847da0d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80');
+           "
+           class="story"
+         >
+           <img
+             class="story__avatar"
+             src="https://cdn.pixabay.com/photo/2014/04/03/10/32/user-310807_960_720.png"
+             alt=""
+           />
+           <h4>Anju</h4>
+         </div>
+         <!-- story ends -->
+          <!-- story starts -->
+          <div
+            style="
+              background-image: url('https://images.unsplash.com/photo-1527082395-e939b847da0d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80');
+            "
+            class="story"
+          >
+            <img
+              class="story__avatar"
+              src="https://cdn.pixabay.com/photo/2014/04/03/10/32/user-310807_960_720.png"
+              alt=""
+            />
+            <span class="material-icons">
+                arrow_forward
+                </span>
+            <h4>Anju</h4>
+          </div>
+          <!-- story ends -->
+
+    </div>
+    <!-- message sender starts -->
+    <div class="messageSender">
+        <div class="messageSender__top">
+          <img
+            class="user__avatar"
+            src="https://cdn.pixabay.com/photo/2014/04/03/10/32/user-310807_960_720.png"
+            alt=""
+          />
+          <form>
+            <input class="messageSender__input" value="What's on your mind?" type="text" />
+          </form>
+        </div>
+
+        <div class="messageSender__bottom">
+          <div class="messageSender__option">
+            <span style="color: red" class="material-icons"> videocam </span>
+            <h3>Live video</h3>
+          </div>
+
+          <div class="messageSender__option">
+            <span style="color: green" class="material-icons"> photo_library </span>
+            <h3>Photo/video</h3>
+          </div>
+
+          <div class="messageSender__option">
+            <span style="color: orange" class="material-icons"> insert_emoticon </span>
+            <h3>Feeling/Activity</h3>
+          </div>
+        </div>
+      </div>
+      <!-- message sender ends -->
+   
+<!-- post starts -->
+<div class="post">
+    <div class="post__top">
+      <img
+        class="user__avatar post__avatar"
+        src="https://cdn.pixabay.com/photo/2014/04/03/10/32/user-310807_960_720.png"
+        alt=""
+      />
+      <div class="post__topInfo">
+        <h3>Anju</h3>
+        <p>25 April at 20:30</p>
+      </div>
+    </div>
+
+    <div class="post__bottom">
+      <p>Message</p>
+    </div>
+
+    <div class="post__image">
+      <img
+        src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2Fyc3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80"
+        alt=""
+      />
+    </div>
+
+    <div class="post__options">
+      <div class="post__option">
+        <span class="material-icons"> thumb_up </span>
+        <p>Like</p>
+      </div>
+
+      <div class="post__option">
+        <span class="material-icons"> chat_bubble_outline </span>
+        <p>Comment</p>
+      </div>
+
+      <div class="post__option">
+        <span class="material-icons"> near_me </span>
+        <p>Share</p>
+      </div>
+    </div>
+  </div>
+  <!-- post ends -->
+  <!-- post starts -->
+<div class="post">
+    <div class="post__top">
+      <img
+        class="user__avatar post__avatar"
+        src="https://scontent.fcok10-2.fna.fbcdn.net/v/t39.30808-6/278154795_3116461071926684_7045535712855440419_n.png?stp=dst-png_p180x540&_nc_cat=1&ccb=1-5&_nc_sid=730e14&_nc_ohc=ACLGlwedNcUAX9I5JuY&_nc_ht=scontent.fcok10-2.fna&oh=00_AT9DhJD3Tz_CDnjVk4DFHw9TWxQFREUDJSqmgC0arYhpyw&oe=6258105D"
+        alt=""
+      />
+      <div class="post__topInfo">
+        <h3>Media</h3>
+        <p>25 April at 20:30</p>
+      </div>
+    </div>
+
+    <div class="post__bottom">
+      <p>Message</p>
+    </div>
+
+    <div class="post__image">
+      <img
+        src="https://scontent.fcok10-2.fna.fbcdn.net/v/t39.30808-6/278154795_3116461071926684_7045535712855440419_n.png?stp=dst-png_p180x540&_nc_cat=1&ccb=1-5&_nc_sid=730e14&_nc_ohc=ACLGlwedNcUAX9I5JuY&_nc_ht=scontent.fcok10-2.fna&oh=00_AT9DhJD3Tz_CDnjVk4DFHw9TWxQFREUDJSqmgC0arYhpyw&oe=6258105D"
+        alt=""
+      />
+    </div>
+
+    <div class="post__options">
+      <div class="post__option">
+        <span class="material-icons"> thumb_up </span>
+        <p>Like</p>
+      </div>
+
+      <div class="post__option">
+        <span class="material-icons"> chat_bubble_outline </span>
+        <p>Comment</p>
+      </div>
+
+      <div class="post__option">
+        <span class="material-icons"> near_me </span>
+        <p>Share</p>
+      </div>
+    </div>
+  </div>
+  <!-- post ends -->
+   <!-- post starts -->
+<div class="post">
+    <div class="post__top">
+      <img
+        class="user__avatar post__avatar"
+        src="https://scontent.fcok10-2.fna.fbcdn.net/v/t1.6435-9/136964374_234116931658686_2720719244568381156_n.jpg?stp=dst-jpg_s960x960&_nc_cat=104&ccb=1-5&_nc_sid=8631f5&_nc_ohc=-tOFzf1s5iUAX-aidKU&_nc_oc=AQleSUXGYG841YJ1D9RZtQX_0o2Ys-YebVopTTzH-YCKOC1A69AETpS2qodzwpKKBUM9TuIPvS6Kd5zbmDnLHT6q&_nc_ht=scontent.fcok10-2.fna&oh=00_AT_FmI0KscUVSD6HKtHvl3krsvqqPtqfRsdwGkL-aBmUrg&oe=62798B91"
+        alt=""
+      />
+      <div class="post__topInfo">
+        <h3>ICU</h3>
+        <p>25 April at 20:30</p>
+      </div>
+    </div>
+
+    <div class="post__bottom">
+      <p></p>
+    </div>
+
+    <div class="post__image">
+      <img
+        src="https://scontent.fcok10-1.fna.fbcdn.net/v/t39.30808-6/278190488_5226228760741928_6348010617967424267_n.jpg?stp=dst-jpg_s600x600&_nc_cat=105&ccb=1-5&_nc_sid=5cd70e&_nc_ohc=o6Wm6m2h0OUAX_PjixC&_nc_ht=scontent.fcok10-1.fna&oh=00_AT-klptnjN0DNijkSM8soOM9S4wNXCdkGjR1CIMXMnSk_g&oe=6256F462"
+        alt=""
+      />
+    </div>
+
+    <div class="post__options">
+      <div class="post__option">
+        <span class="material-icons"> thumb_up </span>
+        <p>Like</p>
+      </div>
+
+      <div class="post__option">
+        <span class="material-icons"> chat_bubble_outline </span>
+        <p>Comment</p>
+      </div>
+
+      <div class="post__option">
+        <span class="material-icons"> near_me </span>
+        <p>Share</p>
+      </div>
+    </div>
+  </div>
+  <!-- post ends -->
+</div>
+  <!-- feed ends -->
+      </div>
+    </div>
+</body>
+</html>
